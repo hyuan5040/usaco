@@ -1,9 +1,17 @@
-#include <cstdio>
-#include <cstring>
 #include <iostream>
 using namespace std;
-int n, s[105], b[105], t[105];
-int bk[1005];
-int main () {
-
- }
+int main() {
+    int n;
+	cin >> n;
+	int cows[n];
+    int res = n - 1;
+	for(int i = 0; i < n; i ++) {
+		cin >> cows[i];
+	}
+	for(int i = n - 2; i >= 0; i --) {
+		if(cows[i] < cows[i + 1]) res = i;
+		else break;
+	}
+	cout << res << endl;
+	return 0;
+}
