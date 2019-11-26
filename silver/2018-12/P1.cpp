@@ -25,7 +25,7 @@ void dfs(int day, int amount) {
 			dfs(day + 1, amount + vals[i]);
                 }
 		S[1 - p].erase(S[1 - p].find(vals[i]));
-		S[p].insert(vals[i]);
+		S[p].insert(vals[i]); 
 	}
 }
 int main() {
