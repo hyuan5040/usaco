@@ -1,0 +1,73 @@
+S111111111100000000000000000000000000000
+1000000000110000000000000000000000000000
+1000011111100000000000000000000000000000
+1000001000000000000000000000000000000000
+111111E000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+0000000000000000000000000000000000000000
+
+class Point { 
+   int x; 
+   int y;
+   public Point(int px, int py) {
+   x = px;
+   y = py;
+   }
+}   
+
+(0,0), (4,7)
+
+int bfs( Point start, Point end, int [100][100] graph) {
+    int step=0;
+	Vector<Point> queue;
+	queue.add(start);
+	while (queue.size()> 0){
+	    Vector newQueue;
+		for(Point p: queue){
+		    if(p.x == end.x && p.y == end.y) {
+			   return step;
+			}
+			Vector<Point> neighbors = getNeighbors(p, graph);
+			for(Point p2: neighbors){
+			   newQueue.add(p2);
+			}
+		}
+		step ++;
+		queue = newQueue;
+	}
+	return -1;
+}
+
+vector<Point> getNeighbors (Point p, int graph [100][100]) {
+	vector<Point> neighbors;
+	if (p.x-1 >= 0) {
+		if (graph[p.x-1][p.y] == 1 )
+		  neighbors.push_back(Point(p.x-1,p.y));
+	}
+	if (p.x+1 <= 99) {
+		if (graph[p.x+1][p.y] == 1 )
+		  neighbors.push_back(Point(p.x+1,p.y));
+	}
+	if (p.y+1 <= 99) {
+		if (graph[p.x][p.y+1] == 1 )
+		  neighbors.push_back(Point(p.x,p.y+1));
+	}
+	if (p.y-1 >= 0) {
+		if (graph[p.x][p.y-1] == 1 )
+		  neighbors.push_back(Point(p.x,p.y - 1));
+	}
+	return neighbors;
+}
