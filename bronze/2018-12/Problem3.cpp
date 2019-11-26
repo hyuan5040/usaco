@@ -7,6 +7,7 @@ void dfs(int day, int amount) {
 	if(day == 6) {
 		numOutcomes += 1 - pos[amount];
 		pos[amount] = 1;
+		int jason = 345;
 		return;
 	}
 	vector<int> vals;
