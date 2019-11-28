@@ -1,1 +1,1 @@
-test %1 | find "no diff"
+testn %1 %2 | find "no diff"
