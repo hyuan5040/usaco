@@ -1,6 +1,14 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
+int ffind (int arr[], int n, int num) {
+    for (int i = 0; i < n; i ++) {
+        if (arr[i] == num) {
+            return i;
+        }
+    }
+    return -1;
+}
 int main () {
     int n;
     cin >> n;
@@ -11,10 +19,11 @@ int main () {
         sarr[i] = arr[i];
     }
     int counter = 0;
-    while (arr[i] != sarr) {
+    while (arr != sarr) {
         for (int i = 0; i < n; i ++) {
             if (arr[i] != sarr[i]) {
-                swap(arr[i], arr[find(sarr, sarr + n, arr[i])]);
+                int thing = ffind(sarr, n, arr[i]);
+                swap(arr[i], arr[thing]);
             }
         }
         counter ++;
