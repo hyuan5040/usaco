@@ -1,14 +1,21 @@
 #include <cstdio>
 #include <cstring>
 #include <iostream>
+#include <fstream>
 using namespace std;
 int n, s[105], b[105], t[105];
 int bk[1005];
 int main () {
+
+    ifstream fin;
+    fin.open ("blist.in");
+    ofstream fout;
+    fout.open ("blist.out");
+
      memset(bk, 0, sizeof(bk));
-     cin >> n;
+     fin >> n;
      for(int i = 0; i < n; i++){
-         cin >> s[i] >> t[i] >> b[i];
+         fin >> s[i] >> t[i] >> b[i];
      }
      for(int i = 0; i < n; i++){
          for(int k = s[i]; k <= t[i]; k++){
@@ -21,6 +28,6 @@ int main () {
              maxn = bk[i];
          }
      }
-     cout << maxn << endl;
+     fout << maxn << endl;
      return 0;
  }
