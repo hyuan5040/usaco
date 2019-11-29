@@ -1,6 +1,6 @@
-#include <cstdio>
 #include <vector>
 #include <fstream>
+#include <iostream>
 #define MP make_pair
 #define PB push_back
 #define X first
@@ -9,19 +9,19 @@ using namespace std;
 typedef long long ll;
 typedef pair<ll, ll> pll;
 int main() {
-  ifstream fin(crosswords.in);
-  ofstream fout(crosswords.out);
+  ifstream fin("crosswords.in");
+  ofstream fout("crosswords.out");
   long long R, C;
   fin >> R >> C;
   vector<vector<char> > G(R, vector<char>(C, ' '));
   for(long long r = 0; r < R; r ++) {
     char buf[100];
-    scanf("%s", buf);
+    fin >> buf;
     for(ll c = 0; c < C; c ++) {
       G[r][c] = buf[c];
     }
   }
-  vector<pair<long long, long long> A;
+  vector<pair<long long, long long>> A;
   for(long long r = 0; r < R; r ++) {
     for(ll c = 0; c < C; c ++) {
       bool horizontal = (c + 2 < C && G[r][c ] == '.' && G[r][c + 1] == '.' && G[r][c + 2] == '.' && (c == 0 || G[r][c - 1] == '#'));
@@ -31,7 +31,7 @@ int main() {
       }
     }
   }
-  fout << A.size << endl;
+  fout << A.size() << endl;
   for(pll clue : A) {
     fout << clue.first << " " << clue.second << endl;
   }
