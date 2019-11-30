@@ -16,5 +16,5 @@
 2019-01
   Problem 1 : passed
   Problem 2 : passed
-  Problem 3 : fail
+  Problem 3 : didn't try
 
