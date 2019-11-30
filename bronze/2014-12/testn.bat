@@ -4,7 +4,7 @@ set data=data%1
 FOR /L %%A IN (1,1,%2) DO (
   echo test %%A
   type %data%\%%A.in
-  Problem%1 <%data%\%%A.in > %data%\%%A.out.jason
+  Problem%1 %data%\%%A.in %data%\%%A.out.jason
   fc %data%\%%A.out %data%\%%A.out.jason
 
 )

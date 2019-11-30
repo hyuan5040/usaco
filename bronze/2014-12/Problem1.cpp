@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 using namespace std;
+
 int calc_md(pair<int, int> one, pair<int, int> two) {
     return abs(one.first - two.first) + abs(one.second - two.second);
 }
@@ -14,9 +15,17 @@ int total (vector<pair<int, int>> points, int n) {
     }
     return total;
 }
-int main () {
-    ifstream fin ("marathon.in");
-    ofstream fout ("marathon.out");
+
+int main (int argc, char *argv[]) {
+    string inputFile = "marathon.in";
+    string outputFile = "marathon.out";
+    if (argc >2) {
+        inputFile = argv[1];
+        outputFile = argv[2];
+    }
+    ifstream fin (inputFile);
+    ofstream fout (outputFile);
+
     int n;
     fin >> n;
     vector <pair<int, int>> points;

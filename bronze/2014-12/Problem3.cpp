@@ -2,8 +2,15 @@
 #include <fstream>
 using namespace std;
 int main() {
-    ifstream fin ("cowjog.in");
-    ofstream fout ("cowjog.out");
+    string fin ("cowjog.in");
+    string fout ("cowjog.out");
+    if (argc >2) {
+            inputFile = argv[1];
+            outputFile = argv[2];
+    }
+    ifstream fin (inputFile);
+    ofstream fout (outputFile);
+
     int n;
     fin >> n;
     vector<int> cows;

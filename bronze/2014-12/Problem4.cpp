@@ -6,8 +6,14 @@
 #include <climits>
 using namespace std;
 int main() {
-    ifstream fin ("learning.in");
-    ofstream fout ("learning.out");
+    string fin ("learning.in");
+    string fout ("learning.out");
+    if (argc >2) {
+            inputFile = argv[1];
+            outputFile = argv[2];
+    }
+    ifstream fin (inputFile);
+    ofstream fout (outputFile);
     int n, A, B;
     fin >> n >> A >> B;
     vector<pair<int, int> > V;

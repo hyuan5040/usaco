@@ -9,8 +9,18 @@ using namespace std;
 typedef long long ll;
 typedef pair<ll, ll> pll;
 int main() {
-  ifstream fin("crosswords.in");
-  ofstream fout("crosswords.out");
+  string fin("crosswords.in");
+  string fout("crosswords.out");
+
+  string inputFile = "marathon.in";
+  string outputFile = "marathon.out";
+  if (argc >2) {
+          inputFile = argv[1];
+          outputFile = argv[2];
+  }
+  ifstream fin (inputFile);
+  ofstream fout (outputFile);
+
   long long R, C;
   fin >> R >> C;
   vector<vector<char> > G(R, vector<char>(C, ' '));
