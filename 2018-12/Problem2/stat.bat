@@ -1,1 +1,0 @@
-test | find "no diff"
