@@ -5,16 +5,16 @@
   Problem 4 : passed
 
 2018-01
-  Problem 1 : passed
+  Problem 1 : fail
   Problem 2 : passed
-  Problem 3 : passed
+  Problem 3 : fail
 
 2018-12
-  Problem 1 : passed
+  Problem 1 : fail
   Problem 2 : fail
-  Problem 3 : passed
+  Problem 3 : fail
 2019-01
-  Problem 1 : passed
+  Problem 1 : fail
   Problem 2 : passed
   Problem 3 : didn't try
 
