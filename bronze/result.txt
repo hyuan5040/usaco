@@ -1,13 +1,23 @@
 2014-12
-  Problem 1 : passed
-  Problem 2 : passed
-  Problem 3 : passed
-  Problem 4 : passed
+  Problem 1 : passed, hy
+  Problem 2 : passed, hy
+  Problem 3 : passed, hy
+  Problem 4 : passed, hy
+
+2017-12
+  Problem 1 : passed, hy
+  Problem 2 : created
+  Problem 3 : created
 
 2018-01
   Problem 1 : fail
   Problem 2 : passed
   Problem 3 : fail
+
+2018-02
+  Problem 1 : created
+  Problem 2 : created
+  Problem 3 : created
 
 2018-12
   Problem 1 : fail
