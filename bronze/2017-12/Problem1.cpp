@@ -13,6 +13,9 @@ int main (int argc, char *argv[]) {
         outputFile = argv[2];
     }
     ifstream fin (inputFile);
+
+
+
     ofstream fout (outputFile);
     fout << "42";
     // hi, this is the end
