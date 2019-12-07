@@ -6,12 +6,10 @@ using namespace std;
 int n, s[105], b[105], t[105];
 int bk[1005];
 int main () {
-
     ifstream fin;
     fin.open ("blist.in");
     ofstream fout;
     fout.open ("blist.out");
-
      memset(bk, 0, sizeof(bk));
      fin >> n;
      for(int i = 0; i < n; i++){

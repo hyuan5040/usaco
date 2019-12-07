@@ -1,16 +1,19 @@
 #include <iostream>
 #include <algorithm>
+#include <fstream>
 using namespace std;
 struct Swap{
     int a, b, guess;
 };
 int main () {
+    ifstream fin ("shell.in");
+    ofstream fout ("shell.out");
     int swaps;
-    cin >> swaps;
+    fin >> swaps;
     int location[3];
     Swap logg[swaps];
     for (int i = 0; i < swaps; i ++) {
-        cin >> logg[i].a >> logg[i].b >> logg[i].guess;
+        fin >> logg[i].a >> logg[i].b >> logg[i].guess;
     }
     int max = 0;
     for (int i = 0; i < 3; i ++) {
@@ -26,5 +29,5 @@ int main () {
             max = tempCount;
         }
     }
-    cout << max;
+    fout << max;
 }

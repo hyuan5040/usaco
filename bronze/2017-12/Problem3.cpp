@@ -12,7 +12,7 @@ int main (int argc, char *argv[]) {
         inputFile = argv[1];
         outputFile = argv[2];
     }
-    ifstream fin (inputFile);
-    ofstream fout (outputFile);
+    ifstream fin (inputFile.c_str());
+    ofstream fout (outputFile.c_str());
     fout << "42";
 }

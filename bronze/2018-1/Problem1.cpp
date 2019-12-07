@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 int main() {
+  ifstream fin ("mixmilk.in");
+  ofstream fout ("mixmilk.out");
   int solve, xright, xleft, ydown, yup;
   int x1, y1, x2, y2, xx1, yy1, xx2, yy2;
-  cin >> x1 >> y1 >> x2 >> y2 >> xx1 >> yy1 >> xx2 >> yy2;
+  fin >> x1 >> y1 >> x2 >> y2 >> xx1 >> yy1 >> xx2 >> yy2;
   if (xx1 > x1) {
     xleft = 0;
   }
@@ -49,6 +52,6 @@ int main() {
       solve = (y2-y1)*(xx1-x1);
     }
   }
-  cout << solve;
+  fout << solve;
   return 0;
 }
