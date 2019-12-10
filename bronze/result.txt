@@ -15,16 +15,16 @@
   Problem 3 : fail, Time limit exceeded on sample input case - et
 
 2018-02
-  Problem 1 : created
-  Problem 2 : created
-  Problem 3 : created
+  Problem 1 : passed, hy
+  Problem 2 : passed, hy
+  Problem 3 : failed 1 ts
 
 2018-12
   Problem 1 : failed (passed 9/10, last case failed) - et
   Problem 2 : pass - et
   Problem 3 : pass - et
 2019-01
-  Problem 1 : fail - et
+  Problem 1 : passed
   Problem 2 : passed -et
   Problem 3 : didn't try 
 
