@@ -10,9 +10,9 @@
   Problem 3 : created
 
 2018-01
-  Problem 1 : fail
-  Problem 2 : passed
-  Problem 3 : fail
+  Problem 1 : passed - et
+  Problem 2 : failed (passed 1 out 10) - et
+  Problem 3 : fail, Time limit exceeded on sample input case - et
 
 2018-02
   Problem 1 : created
@@ -20,11 +20,11 @@
   Problem 3 : created
 
 2018-12
-  Problem 1 : fail
-  Problem 2 : fail
-  Problem 3 : fail
+  Problem 1 : failed (passed 9/10, last case failed) - et
+  Problem 2 : pass - et
+  Problem 3 : pass - et
 2019-01
-  Problem 1 : fail
-  Problem 2 : passed
-  Problem 3 : didn't try
+  Problem 1 : fail - et
+  Problem 2 : passed -et
+  Problem 3 : didn't try 
 
